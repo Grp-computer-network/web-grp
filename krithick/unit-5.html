@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="unit-5.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="logo">Computer-Network</div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="../ameer/index.html">Unit-1</a></li>
+                <li><a href="#">Unit-2</a></li>
+                <li><a href="#">Unit-3</a></li>
+                <li><a href="#">Unit-4</a></li>
+                <li><a href="unit-5.html">Unit-5</a></li>
+            </ul>
+        </div>
+    <div class="notes"><a href="#" style="text-decoration: none; color: black; ">Notes &  Question-paper</a></div>
+    </div>
+    <marquee behavior="" direction="" style="margin-top: 70px;">Welcome to  our page you can learn computer network and can  also download your notes&last years question papers HERE  </marquee>
+    <center>
+        <h2>UNIT - 5</h2>
+    </center>
+    <h2>
+        Transport layer
+    </h2>
+     <br>
+    <p  class="p-tag">
+        The transport Layer is the second layer in the TCP/IP model and the fourth layer in the OSI model. It is an end-to-end layer used to deliver messages to a host. It is termed an end-to-end layer because it provides a point-to-point connection rather than hop-to-hop, between the source host and destination host to deliver the services reliably. The unit of data encapsulation in the Transport Layer is a segment. 
+    </p>
+    <h2>
+        Responsibilities of a Transport Layer
+    </h2>
+   <p class="p-tag">
+     1.  The Process to Process Delivery <br>
+     2.  End-to-End Connection between Hosts <br>
+     3.  Multiplexing and Demultiplexing <br>
+     4. Congestion Control <br>
+     5.Data integrity and Error correction<br>
+     6.Flow control
+  </p>
+  <br>
+ <center>
+    <img src="images1/img-1.png" alt="" style="width: 500px; height: 350px;">
+</center>
+ <br>
+ <h2>Mutiplexing & Demultiplexing</h2>
+  <p class="p-tag">Multiplexing and Demultiplexing
+    Multiplexing(many to one) is when data is acquired from several processes from the sender and merged into one packet along with headers and sent as a single packet. Multiplexing allows the simultaneous use of different processes over a network that is running on a host.  The processes are differentiated by their port numbers. Similarly, Demultiplexing(one to many is required at the receiver side when the message is distributed into different processes. Transport receives the segments of data from the network layer distributes and delivers it to the appropriate process running on the receiver’s machine.</p>
+<center>
+    <img src="images1/CN_Multiplexing-1.jpg" alt="" style="width: 800px; height: 350px;">
+</center><br>
+<h2>
+    Adressing Establishing and Releasing a Connection
+</h2>
+<p class="p-tag">
+    To make the transport services reliable, TCP hosts must establish a connection-oriented session with one another. Connection establishment is performed by using the three-way handshake mechanism. A three-way handshake synchronizes both ends of a network by enabling both sides to agree upon original sequence numbers. 
+    This mechanism also provides that both sides are ready to transmit data and learn that the other side is available to communicate. This is essential so that packets are not shared or retransmitted during session establishment or after session termination. Each host randomly selects a sequence number used to track bytes within the stream it is sending and receiving.
+</p><br>
+<center>
+    <img src="images1/img-2.jpg" alt="">
+</center><br>
+<h2>Connection Termination Protocol (Connection Release)</h2><br>
+<p class="p-tag">
+    While it creates three segments to establish a connection, it takes four segments to terminate a connection.  During a TCP connection is full-duplex (that is, data flows in each direction independently of the other direction), each direction should be shut down alone.
+    The termination procedure for each host is shown in the figure. The rule is that either end can share a FIN when it has finished sending data.
+    When a TCP receives a FIN, it should notify the application that the other end has terminated that data flow direction. The sending of a FIN is usually the result of the application issuing a close.
+</p>
+<center>
+    <img src="images1/img-3.jpg" alt="">
+</center>
+<br>
+<h2 >
+    Simple transport protocol
+</h2>
+<p class="p-tag">
+    Transport protocols hide all the possible problems inherent to the physical and network layers, such as disorder, losses, delay and corruption. These protocols provide a reliable and ordered communication between a sender and a receiver, the usual strategy being to retransmit a lost or corrupted packet. At the same time, the most sophisticated of these protocols implement different mechanisms in order to avoid duplication and ensure correct delivery order, and to optimize the performance of data delivery versus the underlying real or virtual network.
+</p>
+<h2>
+    Internet transport protocols(ITP)
+</h2>
+<p class="p-tag">
+    Transport protocols run over the best-effort IP layer to provide a mechanism for applications to communicate with each other without directly interacting with the IP layer. In the IP protocol stack, the most widely used two transport protocols are User Datagram Protocol (UDP) and the Transport Control Protocol (TCP).
+</p>
+<center>
+    <img src="images1/img-5.jpg" alt="" style="height: 250px;">
+</center>
+<hr>
+<center>
+    <h2>
+        Network security
+    </h2><br>
+</center>
+<center>
+    <img src="images1/img-4.png" alt="" style="height: 200px; width: 350px;">
+</center>
+<p class="p-tag">Network security is defined as the activity created to protect the integrity of your network and data. Every company or organization that handles a large amount of data, has a degree of solutions against many cyber threats. 
+    Any action intended to safeguard the integrity and usefulness of your data and network is known as network security. This is a broad, all-encompassing phrase that covers software and hardware solutions, as well as procedures, guidelines, and setups for network usage, accessibility, and general threat protection.
+</p>
+<h2>
+    Types of Network Security
+</h2>
+<p class="p-tag">
+        There are several types of network security through which we can make our network more secure, Your network and data are shielded from breaches, invasions, and other dangers by network security. Here below are some important types of network security:
+    </p>
+    <h2>
+        1.Email Security
+    </h2> 
+    <p class="p-tag">
+         The most common danger vector for a security compromise is email gateways. Hackers create intricate phishing campaigns using recipients’ personal information and social engineering techniques to trick them and direct them to malicious websites.</p>
+      <h2>2.Firewalls</h2><p class="p-tag">
+        Your trusted internal network and untrusted external networks, like the Internet, are separated by firewalls. They control traffic by enforcing a set of predetermined rules. A firewall may consist of software, hardware, or both.</p>
+          <h2>3.Network Segmentation</h2><p class="p-tag">
+            Network traffic is divided into several categories by software-defined segmentation, which also facilitates the enforcement of security regulations. Ideally, endpoint identity—rather than just IP addresses—is the basis for the classifications. To ensure that the appropriate amount of access is granted to the appropriate individuals and that suspicious devices are controlled and remediated, access permissions can be assigned based on role, location, and other factors.</p>
+
+       <h2>4.Cloud Network Security</h2><p class="p-tag">
+        Workloads and applications are no longer solely housed in a nearby data centre on-site. More adaptability and creativity are needed to protect the modern data centre as application workloads move to the cloud.
+        </p>
+       <h2> 5. Web security</h2>
+       <p class="p-tag">
+        A online security solution will restrict access to harmful websites, stop web-based risks, and manage staff internet usage. Your web gateway will be safeguarded both locally and in the cloud. “Web security” also include the precautions you take to safeguard your personal website.</p>
+       <h2>Cryptography</h2>
+       <center><img src="img-6.jpg" alt=""></center>
+        <p class="p-tag"> Cryptography is technique of securing information and communications through use of codes so that only those person for whom the information is intended can understand it and process it. Thus preventing unauthorized access to information. The prefix “crypt” means “hidden” and suffix “graphy” means “writing”. In Cryptography the techniques which are use to protect information are obtained from mathematical concepts and a set of rule based calculations known as algorithms to convert messages in ways that make it hard to decode it. These algorithms are used for cryptographic key generation, digital signing, verification to protect data privacy, web browsing on internet and to protect confidential transactions such as credit card and debit card transactions. </p>
+
+        <div class="footer" style="padding: 10px;">
+            <center><h2>CONTACT US </h2></center>
+            <h3>Email - krithickprofessional@gmail.com</h3><br><hr>
+            <h2>Devolped by </h2><br>
+            <ul class="footer-2">
+                <li class="li">kritick</li>
+                <li class="li">selva</li>
+                <li class="li">madhan</li>
+                <li class="li">ameer</li>
+                <li class="li">yuvaraj</li>
+                <li class="li">vaibhav</li>
+            </ul><br><hr>
+           <h2>Supported by</h2>
+           <ul class="footer-2">
+            <li class="li">Guhan</li>
+            <li class="li">madhan</li>
+            <li class="li">karthikeyan</li>
+           </ul>
+        </div>
+    </body>
+</html>
