@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <h1>UNIT-4</h1>
+       <h1>NETWORK LAYER</h1>
+    </center>
+    <div class="unit-introduction">
+        <h2>INTRODUCTION:</h2>
+        <p class="para">
+            More than one path may exist betwwen source and destination in a network.
+            The data received from the transport layer is reframed into packets.The packets may be transferred through different paths. So,the numbering of packets is necessary to arrange the packets into original order.
+        </p>
+        <p class="para">
+            These functionalities are carried out in the network layer. the network layer interconnects the device and transfer the packet by choosing the optimal network path. These functionalities are discussed in this chapter.
+        </p>
+    </div>
+    <h2>
+        Functionality Of Network Layer:
+    </h2>
+    <p class="para">
+        The network Layer is the third layer in the OSI model of computer networks.
+        Its main function is to transfer network packets from the source to the destination. 
+        It is involved both the source host and the destination host. 
+    </p>    
+        
+    <p class="para">
+        At the source, it accepts a packet from the transport layer, encapsulates it in a datagram, and then delivers the packet to the data link layer so that it can further be sent to the receiver.
+        At the destination, the datagram is decapsulated, and the packet is extracted and delivered to the corresponding transport layer.
+    </p>
+     <center>
+        <img src="image/networkimage.jpg" class="img">
+        <p class="p">Here the function of network layer</p>
+    </center>
+
+<h2>Features of Network Layer:</h2>
+<p class="para">
+    <ol>
+      <li>The main responsibility of the Network layer is to carry the data packets from the source to the destination without changing or using them.</li>
+      <li>If the packets are too large for delivery, they are fragmented i.e., broken down into smaller packets.</li>
+      <li>It decides the route to be taken by the packets to travel from the source to the destination among the multiple routes available in a network (also called routing).</li> 
+      <li>The source and destination addresses are added to the data packets inside the network layer.</li>
+    </ol>
+</p>
+<center>
+<h1>NETWORK LAYER (Design issue)</h1>
+</center>
+
+<p class="para">
+Network layer is majorly focused on getting packets from the source to the destination, routing error handling and congestion control. Before learning about design issues in the network layer, let’s learn about it’s various functions.
+<ul>
+<li>Addressing: Maintains the address at the frame header of both source and destination and performs addressing to detect various devices in network.</li>
+<li>Packeting: This is performed by Internet Protocol. The network layer converts the packets from its upper layer.</li>
+<li>Routing: It is the most important functionality. The network layer chooses the most relevant and best path for the data transmission from source to destination.</li>
+<li>Inter-networking: It works to deliver a logical connection across multiple devices.</li>
+</ul>
+<h2>Network layer design issues:</h2>
+</p>
+
+<p class="para">
+ The network layer comes with some design issues they are described as follows:
+ <ol>
+ <li>
+    <p>Store and Forward packet switching: The host sends the packet to the nearest router.
+    This packet is stored there until it has fully arrived once the link is fully processed by verifying the checksum then it is forwarded to the next router till it reaches the destination.
+    This mechanism is called “Store and Forward packet switching.”
+    </p>
+</li>
+ <li> 
+    <p>
+    Services provided to Transport Layer: Through the network/transport layer interface, the network layer transfers it’s services to the transport layer.
+    These services are described below. But before providing these services to the transfer 
+    layer following goals must be kept in mind :-
+    </p>
+</li>
+
+<ul>
+<li>Offering services must not depend on router technology.</li>
+<li>The transport layer needs to be protected from the type, number and topology of the available router.</li>
+<li>The network addresses for the transport layer should use uniform numbering pattern also at LAN and WAN connections.</li>
+</ul>
+</p>
+
+<p class="para">
+<h2>The factors that are handledin designing of network layer are</h2>
+</p>
+<ol>
+    <li>Connetionless Service</li>
+    <li>Connection Oriented Service</li>
+    <li>Service in Static Connetion</li>
+    <li>Service in Dynamic Connetion</li>
+</ol>
+<p class="para">
+<ul>
+    <li>
+        <p>
+        Connetionless Service:The routing and insertion of packets into subnet is done individually.
+        No added setup is required
+        </p>
+    </li>
+<center>
+    <img src="image/connectionless-service.jpg" class="img">
+    <p class="p">connectionless-service</p>
+</center>
+    <li>
+        <p>
+        Connection Oriented Service:The subnet connection-oriented service is called a virtual circuit subnet.
+        the dedicated path is decided before transferring the packet.All the packets in that transmission
+        are carried only in the same path.for example: telephone network.
+        </p>
+        <h3><p>The connection-oriented service includes three phrases</p></h3>
+        <ol>
+            <li>Establishing Connection</li>
+            <li>Packet Transmission</li>
+            <li>Disconnect</li>
+        </ol>
+    </li>
+<center>
+    <img src="image/connection-oriented.jpg" class="img">
+    <p class="p">connection-oriented service</p>
+</center>
+    <li>
+        <p>
+        Service in Static Connetion: The static connection is said to be static routing or non-adaptive routing.
+        This is possible in a network with a small static network routing table.
+        The static table maintains only one entry for each destination.</p>
+    </li>
+    <li>
+        <p>
+        Service in Dynamic Connetion:The dynamic connection is referred to as dynamic routing or adaptive routing .
+        The routing table is dynamic,it identifies possible routes each time
+        fpr each packet based on the traffic over the network.
+        </p>
+    </li>
+</ul>
+</p>
+<center>
+<h1>Routing Algoritms</h1>
+</center>
+<p class="para">
+    In computer networks,routing is the process of selecting the path along with the data will be transferred from the 
+    source node (device) to the destination node.
+    <center><p class="para">This path is determined by the help of routing algorithms in computer networks</p></center>
+</p>
+<center>
+<img src="image/routing-algorithm.jpg" class="img">
+<p class="p">Types of Routing algorithm</p>
+</center>
+
+<ol class="para">
+    <li>Adaptive Routing: Adaptive routing algorithm is also called a dynamic routing algorithm
+        The routing decision are made based on network traffic and topology.
+    </li>
+    <li>Non-Adaptive Routing Algoritm: Non-Adaptive Routing Algoritm is also called a static routing algorithm.
+        The routing decisions are not made based on traffic and topology.
+    </li>
+</ol>
+
+
+<center>
+    <h1>Congestion Control Algorthim</h1>
+</center>
+<p class="para">
+    A state occurring in network layer when the message traffic is so heavy that it slows down network response time.
+</p>
+<p class="para">
+    Congestion control refers to the techniques used to control or prevent congestion.
+    Congestion control techniques can be broadly classified into two categories:
+</p>
+<h2>Open Loop Congestion:</h2>
+<p>
+    Open loop congestion control policies are applied to prevent congestion before it happens.
+    The congestion control is handled either by the source or the destination.
+</p>
+<h2>Closed Loop Congestion:</h2>    
+<p>
+    closed loop congestion control techniques are used to treat or alleviate 
+    congestion after it happens.
+</p>
+
+<center>
+<h1>IP Protocol</h1>
+</center>
+<p>
+Protocol is a rule. The IP protocol is the rule about the format of datagram over the network.
+</p>
+<p>
+The IP datagram contains the header and text part. The header part itself contains the fixed
+size and variable size part.
+</p>
+
+<center>
+    <img src="image/ip.png"  class="img">
+    <p class="p">Ip protocol header</p>
+    </img>
+</center>
+
+<center>
+    <h1>IP Address</h1>
+</center>
+<p>
+    If I want to download a file fromthe internet or load a web page or literally do
+    anything related to the internet, my computer must have an address so that other computers can find and locate mine in order to deliver that particular file or webpage that I am requesting. 
+    In technical terms, that address is called IP Address or Internet Protocol Address.
+</p>
+<h2>Working of IP address:</h2>
+<ul>
+    <li>Your device directly requests your Internet Service Provider which then grants your device access to the web.
+        And an IP Address is assigned to your device from the given range available.
+    </li>
+    <li>Your internet activity goes through your service provider, and they route it back to you, using your IP address.</li>
+    <li>Your IP address can change. For example, turning your router on or off can change your IP Address.</li>
+</ul>
+</p>
+
+
+<center>
+    <img src="image/address-protocol.jpg" class="img">
+    <p class="p">IP addresss</p>
+</center>
+<center>
+    <h1>Internet Control Protocols</h1>
+</center>
+<p>
+   The Ip protocol is used to transfer the message. There are several other protocols to control 
+   the network activities.
+   <ol>
+    <li>Internet Control Message Protocol:</li>
+    <p>
+        The unexcepted event occurred over the network is reported by the ICMP.The router also monitors the event
+        on the network
+    </p>
+    <li>Address Resolution Protocol:</li>
+    <p>
+        The protocol used to ask the ethernet address of a particular host is address Resolution
+        protocol.
+    </p>
+    <li>RARP:</li>
+    <p>
+        RARP stand for Reverse Address Resolution Protocol.
+    </p>
+    <li>BOOTP:</li>
+    <p>
+        BOOTP stand for Boostrap Protocol.
+    </p>
+    <li>DHCP:</li>
+    <p>
+        DHCP stand for Dynamic Host Configuration Protocol.
+    </p>
+</ol>
+</p>
+</body>
+</html>
