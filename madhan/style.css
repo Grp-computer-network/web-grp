@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 body{
     background-color: #48dbfb;
 }
@@ -18,9 +22,6 @@ h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 21px;
     margin-left: 25px;
-    font-size: 1.3rem;
-    margin: 10px;
-    padding: 5px;
 }
 
 ol li{
@@ -39,8 +40,7 @@ p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 21px;
     margin-left: 25px;
-    margin: 10px;
-    padding: 5px;
+    margin: 15px;
 }
 
 .img1{
@@ -64,15 +64,6 @@ p{
     text-decoration: underline;
     text-transform: uppercase;
     color:red;
-}
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-body{
-    background-color: #48dbfb;
 }
 .nav-bar{
     display: flex;
@@ -114,4 +105,20 @@ body{
 .nav-links ul li :hover{
     background-color:#60a3bc;
     transition: all linear 0.1s;
+}
+.footer{
+    height: 250px;
+    width:1075px;
+    background-color:#bdc3c7;
+    border-radius: 15px;
+}
+.footer-2{
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    list-style: none;
+}
+.li{
+    font-size: 1.3rem;
+    text-decoration: none;
 }
